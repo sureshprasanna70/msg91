@@ -29,6 +29,14 @@ After installation run
 In your `config/initalizers/msg91.rb`, initialize your `auth_key`. This can be
 obtained from [msg91.com](msg91.com)
 
+### Send Message
+
+To send a message
+
+```ruby
+message = Msg91::Message.send_text(sender_id,route,text,recepients,country)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
