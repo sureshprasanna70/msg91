@@ -1,7 +1,7 @@
 module Msg91
   class Message
     
-    def self.send_text(sender_id,route,text,recepients,country)
+    def self.send_text(sender_id,route,country,recepients,text)
       auth_key = Msg91.configuration.auth_key
       url = URI("http://api.msg91.com/")
       http = Net::HTTP.new(url.host, url.port)
@@ -17,7 +17,7 @@ module Msg91
 
       private
 
-      def build_json(sender_id,route,text,recepients,country)
+      def build_json(sender_id,route,country,recepients,text)
         body_hash = Hash.new
         content = Hash.new
         sms = Array.new
