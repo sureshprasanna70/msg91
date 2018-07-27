@@ -36,6 +36,13 @@ To send a message
 ```ruby
 message = Msg91::Message.send_text(sender_id,route,text,recepients,country)
 ```
+| params     | type             | description                                                          |
+|------------|------------------|----------------------------------------------------------------------|
+| sender_id  | string           | It contains sender ID                                                |
+| route      | string           | Route name if you have more than one route available in your account |
+| text       | string           | It contains the URL encoded message content to send                  |
+| recepients | array of strings | It contain mobile numbers without country code                       |
+| country    | string           | 0 for international, 91 for India, 1 for USA                         |
 
 ## Development
 
