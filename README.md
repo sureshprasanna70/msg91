@@ -1,5 +1,4 @@
-# Msg91
-
+# Msg91  [![Gem Version](https://badge.fury.io/rb/msg91.svg)](https://badge.fury.io/rb/msg91)
 This is a wrapper gem to the MSG91 SMS service. You can find more about MSG91
 here [msg91.com](https://msg91.com)
 
@@ -52,7 +51,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/digiryte/msg91. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sureshprasanna70/msg91. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
