@@ -6,11 +6,11 @@ require 'msg91/version'
 Gem::Specification.new do |spec|
   spec.name          = "msg91"
   spec.version       = Msg91::VERSION
-  spec.authors       = ["digiryte"]
-  spec.email         = ["support@digiryte.com"]
+  spec.authors       = ["sureshprasanna70@gmail.com"]
+  spec.email         = ["sureshprasanna70+github@gmail.com"]
 
   spec.summary       = %q{Send SMS using MSG91}
-  spec.homepage      = "https://github.com/digiryte"
+  spec.homepage      = "https://github.com/sureshprasanna70/msg91"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
