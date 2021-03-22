@@ -6,7 +6,7 @@ module Msg91
       url = URI("http://api.msg91.com/")
       http = Net::HTTP.new(url.host, url.port)
       path = '/api/v2/sendsms'
-      headers = {'authkey' => auth_key,'Content-Type' => 'application/json','unicode' => '1'}
+      headers = {'authkey' => auth_key,'Content-Type' => 'application/json'}
       body_json = build_json(sender_id,route,text,recepients,country)
       response = http.post(path,body_json,headers)
       parsed_response = JSON.parse(response.read_body)
@@ -28,6 +28,7 @@ module Msg91
         content["to"] = recepients
         sms = sms.push(content)
         body_hash["sms"] = sms
+        body_hash["unicode"] = 1
         body_json = JSON.generate(body_hash, quirks_mode: true)
         return body_json
       end
