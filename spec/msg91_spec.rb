@@ -1,16 +1,14 @@
-require "spec_helper"
+require 'spec_helper'
 
 RSpec.describe Msg91 do
-  describe "#configure" do
-
+  describe '#configure' do
     before(:each) do
       Msg91.configure do |config|
-        config.auth_key = ENV['MSG91_AUTH_KEY'] 
+        config.auth_key = ENV['MSG91_AUTH_KEY']
       end
     end
 
-
-    it "has a version number" do
+    it 'has a version number' do
       expect(Msg91::VERSION).not_to be nil
     end
 
