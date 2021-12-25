@@ -43,6 +43,53 @@ message = Msg91::Message.send_text(sender_id,route,text,recepients,country)
 | recepients | array of strings | It contain mobile numbers without country code                       |
 | country    | string           | 0 for international, 91 for India, 1 for USA                         |
 
+
+### SEND OTP
+
+To send OTP
+
+```ruby
+response = Msg91::Otp.send_otp(template_id, mobile)
+```
+
+| params       | type             | description                                                          |
+|--------------|------------------|----------------------------------------------------------------------|
+| template_id  | string           | Id of template for sending OTP. Can be found in MSG91 panel                                     |
+| mobile       | string           | Mobile number in international format with country code              |
+
+
+
+### VERIFY OTP
+
+To verify the sent OTP
+
+```ruby
+response = Msg91::Otp.verify_otp(mobile,optional_params)
+```
+
+| params          | type             | description                                                          |
+|-----------------|------------------|----------------------------------------------------------------------|
+| mobile          | string           | Mobile number in international format with country code              |
+| optional_params | hash             | can contain otp and otp_expiry                                       |
+
+
+
+### RESEND OTP
+
+To resend the  OTP
+
+```ruby
+response = Msg91::Otp.resend_otp(retrytype, mobile,optional_params)
+```
+
+| params          | type             | description                                                          |
+|-----------------|------------------|----------------------------------------------------------------------|
+| retrytype       | string           | Default - Voice, For text it should be text
+| mobile          | string           | Mobile number in international format with country code              |
+| optional_params | hash             | can contain otp and otp_expiry                                       |
+
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
